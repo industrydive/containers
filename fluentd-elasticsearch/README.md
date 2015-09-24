@@ -1,6 +1,6 @@
 # Fluentd with the elasticsearch plugin
 
-This docker iamge adds the elasticsearch plugin and some elasticsearch configuration to the base fluentd docker image.
+This docker image adds the elasticsearch plugin and some elasticsearch configuration to the base fluentd docker image.
 
 ## Build
 
