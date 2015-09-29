@@ -8,5 +8,7 @@ RUN apt-get update -y && apt-get install --no-install-recommends -y -q \
     python-dev \
     python-setuptools
 
+ENV PYTHONUNBUFFERED 1
+
 RUN easy_install pip
 RUN pip install virtualenv
