@@ -1,5 +1,5 @@
 #!/bin/bash -eu
-
+sleep 15
 setting() {
     setting="${1}"
     value="${2}"
