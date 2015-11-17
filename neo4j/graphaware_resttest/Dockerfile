@@ -21,6 +21,9 @@ RUN curl --fail --silent --show-error --location --output neo4j.tar.gz $NEO4J_UR
 
 WORKDIR /var/lib/neo4j
 
+RUN wget -o plugins/graphaware-server-community-all-2.2.6.35.jar http://graphaware.com/downloads/graphaware-server-community-all-2.2.6.35.jar
+RUN wget -o plugins/graphaware-resttest-2.2.6.35.13.jar http://products.graphaware.com/download/resttest/graphaware-resttest-2.2.6.35.13.jar
+
 RUN mv data /data \
     && ln --symbolic /data
 
