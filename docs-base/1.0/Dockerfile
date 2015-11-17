@@ -26,3 +26,10 @@ RUN apt-get update -yqq \
     /usr/share/man \
     /usr/share/doc \
     /usr/share/doc-base
+#install airflow and its dependencies
+RUN pip install cryptography \
+    && pip install airflow==1.5.1 \
+    && pip install airflow[mysql]==1.5.1
+# base command runs make on workin dir's make file
+# docs container must expose its makefile at its working dir
+CMD ["make", "html"]
