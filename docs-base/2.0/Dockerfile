@@ -26,10 +26,11 @@ RUN apt-get update -yqq \
     /usr/share/man \
     /usr/share/doc \
     /usr/share/doc-base
-#install airflow and its dependencies
+# Install airflow and its dependencies.
 RUN pip install cryptography \
     && pip install airflow==1.6.1 \
-    && pip install airflow[mysql]==1.6.1
-# base command runs make on workin dir's make file
-# docs container must expose its makefile at its working dir
+    && pip install airflow[mysql]==1.6.1 \
+    && pip install sphinx-rtd-theme==0.1.9
+# Base command runs make on working dir's make file.
+# Docs container must expose its Makefile at its working dir.
 CMD ["make", "html"]
