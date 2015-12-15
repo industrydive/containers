@@ -30,6 +30,7 @@ RUN apt-get update -yqq \
 RUN pip install cryptography \
     && pip install airflow==1.6.1 \
     && pip install airflow[mysql]==1.6.1 \
+    && pip install airflow[celery]==1.6.1 \
     && pip install sphinx-rtd-theme==0.1.9
 # Base command runs make on working dir's make file.
 # Docs container must expose its Makefile at its working dir.
