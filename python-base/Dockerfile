@@ -6,7 +6,15 @@ RUN apt-get update -y && apt-get install --no-install-recommends -y -q \
     git \
     python \
     python-dev \
-    python-setuptools
+    python-setuptools \
+    && apt-get clean \
+    && rm -rf \
+    /var/lib/apt/lists/* \
+    /tmp/* \
+    /var/tmp/* \
+    /usr/share/man \
+    /usr/share/doc \
+    /usr/share/doc-base
 
 ENV PYTHONUNBUFFERED 1
 
